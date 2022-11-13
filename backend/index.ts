@@ -21,7 +21,6 @@ export async function createTransaction(
   recipientAddress: string,
   utxos: UTxO[]
 ) {
-  console.log(111, recipientAddress, utxos);
   return await post(`create-mining-transaction`, { recipientAddress, utxos });
 }
 

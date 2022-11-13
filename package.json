@@ -2,7 +2,7 @@
   "name": "minting-next-ts-template",
   "version": "0.1.0",
   "private": true,
-  "description": "A Mesh starter template",
+  "description": "A Mesh minting template",
   "author": "MartifyLabs",
   "scripts": {
     "dev": "next dev",

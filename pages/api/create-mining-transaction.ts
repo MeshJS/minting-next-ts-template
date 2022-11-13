@@ -3,7 +3,7 @@ import {
   AppWallet,
   ForgeScript,
   Transaction,
-  BlockfrostProvider,
+  KoiosProvider,
   largestFirst,
 } from "@martifylabs/mesh";
 import type { Mint } from "@martifylabs/mesh";
@@ -21,9 +21,7 @@ export default async function handler(
   const recipientAddress = req.body.recipientAddress;
   const utxos = req.body.utxos;
 
-  const blockchainProvider = new BlockfrostProvider(
-    process.env.NEXT_PUBLIC_BLOCKFROST_API_KEY!
-  );
+  const blockchainProvider = new KoiosProvider("testnet");
 
   const appWallet = new AppWallet({
     networkId: 0,
@@ -39,11 +37,11 @@ export default async function handler(
   const forgingScript = ForgeScript.withOneSignature(appWalletAddress);
 
   /**
-   * todo: Here you want to select one of your NFT that has not been minted
+   * TODO: Here you want to select one of your NFT that has not been minted
    */
 
-  // In this starter template, we simply randomly pick one from.
   const assetIdPrefix = "MeshToken";
+  // In this starter template, we simply randomly pick one from.
   let selectedAssetId = Math.floor(Math.random() * 10).toString();
   const assetMetadata = assetsMetadata[selectedAssetId];
   const assetName = `${assetIdPrefix}${selectedAssetId}`;
@@ -71,7 +69,7 @@ export default async function handler(
   const originalMetadata = Transaction.readMetadata(unsignedTx);
 
   /**
-   * todo: Here you want to save the `originalMetadata` in a database with the `assetName`
+   * TODO: Here you want to save the `originalMetadata` in a database with the `assetName`
    */
 
   const maskedTx = Transaction.maskMetadata(unsignedTx);

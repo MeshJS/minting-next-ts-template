@@ -6,11 +6,6 @@ Start project with this template:
 npx create-mesh-app minting-next-ts-template
 ```
 
-Create a `.env.local` file add your keys:
-```
-NEXT_PUBLIC_BLOCKFROST_API_KEY = KEY_HERE
-```
-
 ## Learn More
 
 ### [React components and hooks](https://mesh.martify.io/react)

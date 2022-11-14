@@ -1,10 +1,18 @@
+# Multi-sig Minting Next.js TypeScript
+
+Sell native tokens with multi-sig minting; where the backend server will build the transaction, and the user signs the transaction on the frontend.
+      
 ## Getting Started
 
-Start project with this template:
+Start project locally using CLI:
 
 ```bash
 npx create-mesh-app minting-next-ts-template
 ```
+
+Start your project on [Demeter](https://demeter.run/):
+
+[![Code in Cardano Workspace](https://demeter.run/code/badge.svg)](https://demeter.run/code?repository=https://github.com/MartifyLabs/minting-next-ts-template.git&template=typescript)
 
 ## Learn More
 

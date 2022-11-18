@@ -33,7 +33,5 @@ export default async function handler(
 
   const appWalletSignedTx = await appWallet.signTx(signedOriginalTx, true);
 
-  const txHash = await appWallet.submitTx(appWalletSignedTx);
-
-  res.status(200).json({ txHash });
+  res.status(200).json({ appWalletSignedTx });
 }

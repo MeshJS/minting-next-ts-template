@@ -21,11 +21,14 @@ export default function Home() {
 
       const signedTx = await wallet.signTx(maskedTx, true);
 
-      const { txHash } = await signTransaction(
+      const { appWalletSignedTx } = await signTransaction(
         assetName,
         signedTx,
         originalMetadata
       );
+
+      const txHash = await wallet.submitTx(appWalletSignedTx);
+
       setTxHash(txHash);
     } catch (error) {
       console.error(error);

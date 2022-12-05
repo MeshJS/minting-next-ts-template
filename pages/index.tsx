@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { CardanoWallet, MeshBadge, useWallet } from "@martifylabs/mesh-react";
+import { CardanoWallet, MeshBadge, useWallet } from "@meshsdk/react";
 import { createTransaction, signTransaction } from "../backend";
 import { useState } from "react";
 

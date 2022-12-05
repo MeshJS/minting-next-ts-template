@@ -1,4 +1,4 @@
-import type { UTxO } from "@martifylabs/mesh";
+import type { UTxO } from "@meshsdk/core";
 import axios from "axios";
 
 const instance = axios.create({

@@ -5,8 +5,8 @@ import {
   Transaction,
   KoiosProvider,
   largestFirst,
-} from "@martifylabs/mesh";
-import type { Mint } from "@martifylabs/mesh";
+} from "@meshsdk/core";
+import type { Mint } from "@meshsdk/core";
 import { demoMnemonic } from "../../config/wallet";
 import {
   assetsMetadata,

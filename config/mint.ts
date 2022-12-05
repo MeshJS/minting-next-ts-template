@@ -1,4 +1,4 @@
-import type { AssetMetadata } from "@martifylabs/mesh";
+import type { AssetMetadata } from "@meshsdk/core";
 
 export const costLovelace = "10000000";
 

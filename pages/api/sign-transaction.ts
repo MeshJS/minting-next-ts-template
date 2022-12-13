@@ -10,7 +10,7 @@ export default async function handler(
   const signedTx = req.body.signedTx;
   const originalMetadata = req.body.originalMetadata;
 
-  const koios = new KoiosProvider("testnet");
+  const koios = new KoiosProvider("preview");
 
   const appWallet = new AppWallet({
     networkId: 0,
